@@ -32,7 +32,7 @@
  * THE SOFTWARE.
  */
 
-package com.yourcompany.android.colorsplash
+package com.yourcompany.colorsplash
 
 import org.junit.Test
 

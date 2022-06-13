@@ -1,18 +1,370 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="16dp"
+  tools:context=".MainActivity">
 
   <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Hello World!"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+    android:id="@+id/pink_subtitle_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:textSize="24sp"
+    android:paddingBottom="8dp"
+    android:text="@string/subtitle_pink"
+    app:layout_constraintBottom_toTopOf="@id/pink1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <View
+    android:id="@+id/pink1"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/pink1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/pink_subtitle_text"
+    app:layout_constraintEnd_toStartOf="@id/pink2"
+    app:layout_constraintBottom_toTopOf="@id/blue_subtitle_text" />
+
+  <View
+    android:id="@+id/pink2"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/pink2"
+    app:layout_constraintStart_toEndOf="@id/pink1"
+    app:layout_constraintTop_toTopOf="@id/pink1"
+    app:layout_constraintEnd_toStartOf="@id/pink3"
+    app:layout_constraintBottom_toBottomOf="@id/pink1" />
+
+  <View
+    android:id="@+id/pink3"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/pink3"
+    app:layout_constraintStart_toEndOf="@id/pink2"
+    app:layout_constraintTop_toTopOf="@id/pink1"
+    app:layout_constraintEnd_toStartOf="@id/pink4"
+    app:layout_constraintBottom_toBottomOf="@id/pink1" />
+
+  <View
+    android:id="@+id/pink4"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/pink4"
+    app:layout_constraintStart_toEndOf="@id/pink3"
+    app:layout_constraintTop_toTopOf="@id/pink1"
+    app:layout_constraintEnd_toStartOf="@id/pink5"
+    app:layout_constraintBottom_toBottomOf="@id/pink1" />
+
+  <View
+    android:id="@+id/pink5"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/pink5"
+    app:layout_constraintStart_toEndOf="@id/pink4"
+    app:layout_constraintTop_toTopOf="@id/pink1"
+    app:layout_constraintEnd_toStartOf="@id/pink6"
+    app:layout_constraintBottom_toBottomOf="@id/pink1" />
+
+  <View
+    android:id="@+id/pink6"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/pink6"
+    app:layout_constraintStart_toEndOf="@id/pink5"
+    app:layout_constraintTop_toTopOf="@id/pink1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/pink1" />
+
+  <TextView
+    android:id="@+id/blue_subtitle_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:textSize="24sp"
+    android:paddingVertical="8dp"
+    android:text="@string/subtitle_blue"
+    app:layout_constraintBottom_toTopOf="@id/blue1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/pink1" />
+
+  <View
+    android:id="@+id/blue1"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/blue1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/blue_subtitle_text"
+    app:layout_constraintEnd_toStartOf="@id/blue2"
+    app:layout_constraintBottom_toTopOf="@id/green_subtitle_text" />
+
+  <View
+    android:id="@+id/blue2"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/blue2"
+    app:layout_constraintStart_toEndOf="@id/blue1"
+    app:layout_constraintTop_toTopOf="@id/blue1"
+    app:layout_constraintEnd_toStartOf="@id/blue3"
+    app:layout_constraintBottom_toBottomOf="@id/blue1" />
+
+  <View
+    android:id="@+id/blue3"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/blue3"
+    app:layout_constraintStart_toEndOf="@id/blue2"
+    app:layout_constraintTop_toTopOf="@id/blue1"
+    app:layout_constraintEnd_toStartOf="@id/blue4"
+    app:layout_constraintBottom_toBottomOf="@id/blue1" />
+
+  <View
+    android:id="@+id/blue4"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/blue4"
+    app:layout_constraintStart_toEndOf="@id/blue3"
+    app:layout_constraintTop_toTopOf="@id/blue1"
+    app:layout_constraintEnd_toStartOf="@id/blue5"
+    app:layout_constraintBottom_toBottomOf="@id/blue1" />
+
+  <View
+    android:id="@+id/blue5"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/blue5"
+    app:layout_constraintStart_toEndOf="@id/blue4"
+    app:layout_constraintTop_toTopOf="@id/blue1"
+    app:layout_constraintEnd_toStartOf="@id/blue6"
+    app:layout_constraintBottom_toBottomOf="@id/blue1" />
+
+  <View
+    android:id="@+id/blue6"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/blue6"
+    app:layout_constraintStart_toEndOf="@id/blue5"
+    app:layout_constraintTop_toTopOf="@id/blue1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/blue1" />
+
+  <TextView
+    android:id="@+id/green_subtitle_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:textSize="24sp"
+    android:paddingVertical="8dp"
+    android:text="@string/subtitle_green"
+    app:layout_constraintBottom_toTopOf="@id/green1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/blue1" />
+
+  <View
+    android:id="@+id/green1"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/green1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/green_subtitle_text"
+    app:layout_constraintEnd_toStartOf="@id/green2"
+    app:layout_constraintBottom_toTopOf="@id/yellow_subtitle_text" />
+
+  <View
+    android:id="@+id/green2"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/green2"
+    app:layout_constraintStart_toEndOf="@id/green1"
+    app:layout_constraintTop_toTopOf="@id/green1"
+    app:layout_constraintEnd_toStartOf="@id/green3"
+    app:layout_constraintBottom_toBottomOf="@id/green1" />
+
+  <View
+    android:id="@+id/green3"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/green3"
+    app:layout_constraintStart_toEndOf="@id/green2"
+    app:layout_constraintTop_toTopOf="@id/green1"
+    app:layout_constraintEnd_toStartOf="@id/green4"
+    app:layout_constraintBottom_toBottomOf="@id/green1" />
+
+  <View
+    android:id="@+id/green4"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/green4"
+    app:layout_constraintStart_toEndOf="@id/green3"
+    app:layout_constraintTop_toTopOf="@id/green1"
+    app:layout_constraintEnd_toStartOf="@id/green5"
+    app:layout_constraintBottom_toBottomOf="@id/green1" />
+
+  <View
+    android:id="@+id/green5"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/green5"
+    app:layout_constraintStart_toEndOf="@id/green4"
+    app:layout_constraintTop_toTopOf="@id/green1"
+    app:layout_constraintEnd_toStartOf="@id/green6"
+    app:layout_constraintBottom_toBottomOf="@id/green1" />
+
+  <View
+    android:id="@+id/green6"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/green6"
+    app:layout_constraintStart_toEndOf="@id/green5"
+    app:layout_constraintTop_toTopOf="@id/green1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/green1" />
+
+  <TextView
+    android:id="@+id/yellow_subtitle_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:textSize="24sp"
+    android:paddingVertical="8dp"
+    android:text="@string/subtitle_yellow"
+    app:layout_constraintBottom_toTopOf="@id/yellow1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/green1" />
+
+  <View
+    android:id="@+id/yellow1"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/yellow1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/yellow_subtitle_text"
+    app:layout_constraintEnd_toStartOf="@id/yellow2"
+    app:layout_constraintBottom_toTopOf="@id/purple_subtitle_text" />
+
+  <View
+    android:id="@+id/yellow2"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/yellow2"
+    app:layout_constraintStart_toEndOf="@id/yellow1"
+    app:layout_constraintTop_toTopOf="@id/yellow1"
+    app:layout_constraintEnd_toStartOf="@id/yellow3"
+    app:layout_constraintBottom_toBottomOf="@id/yellow1" />
+
+  <View
+    android:id="@+id/yellow3"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/yellow3"
+    app:layout_constraintStart_toEndOf="@id/yellow2"
+    app:layout_constraintTop_toTopOf="@id/yellow1"
+    app:layout_constraintEnd_toStartOf="@id/yellow4"
+    app:layout_constraintBottom_toBottomOf="@id/yellow1" />
+
+  <View
+    android:id="@+id/yellow4"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/yellow4"
+    app:layout_constraintStart_toEndOf="@id/yellow3"
+    app:layout_constraintTop_toTopOf="@id/yellow1"
+    app:layout_constraintEnd_toStartOf="@id/yellow5"
+    app:layout_constraintBottom_toBottomOf="@id/yellow1" />
+
+  <View
+    android:id="@+id/yellow5"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/yellow5"
+    app:layout_constraintStart_toEndOf="@id/yellow4"
+    app:layout_constraintTop_toTopOf="@id/yellow1"
+    app:layout_constraintEnd_toStartOf="@id/yellow6"
+    app:layout_constraintBottom_toBottomOf="@id/yellow1" />
+
+  <View
+    android:id="@+id/yellow6"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/yellow6"
+    app:layout_constraintStart_toEndOf="@id/yellow5"
+    app:layout_constraintTop_toTopOf="@id/yellow1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/yellow1" />
+
+  <TextView
+    android:id="@+id/purple_subtitle_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:textSize="24sp"
+    android:paddingVertical="8dp"
+    android:text="@string/subtitle_purple"
+    app:layout_constraintBottom_toTopOf="@id/purple1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/yellow1" />
+
+  <View
+    android:id="@+id/purple1"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/purple1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/purple_subtitle_text"
+    app:layout_constraintEnd_toStartOf="@id/purple2"
+    app:layout_constraintBottom_toBottomOf="parent" />
+
+  <View
+    android:id="@+id/purple2"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/purple2"
+    app:layout_constraintStart_toEndOf="@id/purple1"
+    app:layout_constraintTop_toTopOf="@id/purple1"
+    app:layout_constraintEnd_toStartOf="@id/purple3"
+    app:layout_constraintBottom_toBottomOf="@id/purple1" />
+
+  <View
+    android:id="@+id/purple3"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/purple3"
+    app:layout_constraintStart_toEndOf="@id/purple2"
+    app:layout_constraintTop_toTopOf="@id/purple1"
+    app:layout_constraintEnd_toStartOf="@id/purple4"
+    app:layout_constraintBottom_toBottomOf="@id/purple1" />
+
+  <View
+    android:id="@+id/purple4"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/purple4"
+    app:layout_constraintStart_toEndOf="@id/purple3"
+    app:layout_constraintTop_toTopOf="@id/purple1"
+    app:layout_constraintEnd_toStartOf="@id/purple5"
+    app:layout_constraintBottom_toBottomOf="@id/purple1" />
+
+  <View
+    android:id="@+id/purple5"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/purple5"
+    app:layout_constraintStart_toEndOf="@id/purple4"
+    app:layout_constraintTop_toTopOf="@id/purple1"
+    app:layout_constraintEnd_toStartOf="@id/purple6"
+    app:layout_constraintBottom_toBottomOf="@id/purple1" />
+
+  <View
+    android:id="@+id/purple6"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/purple6"
+    app:layout_constraintStart_toEndOf="@id/purple5"
+    app:layout_constraintTop_toTopOf="@id/purple1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@id/purple1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

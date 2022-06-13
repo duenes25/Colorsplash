@@ -32,25 +32,67 @@
  * THE SOFTWARE.
  */
 
-package com.yourcompany.android.colorsplash
+package com.yourcompany.colorsplash
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.view.View
+import android.view.ViewTreeObserver
+import android.view.animation.DecelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.animation.doOnEnd
+import androidx.core.splashscreen.SplashScreen
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import java.util.Timer
+import kotlin.concurrent.schedule
 
-/**
- * Main Screen
- */
 class MainActivity : AppCompatActivity() {
 
+  var contentHasLoaded = false
+
   override fun onCreate(savedInstanceState: Bundle?) {
-    // Switch to AppTheme for displaying the activity
-    setTheme(R.style.AppTheme)
+    val splashScreen = installSplashScreen()
 
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    // Your code
+    startLoadingContent()
+    setupSplashScreen(splashScreen)
+  }
 
+  private fun startLoadingContent() {
+    // For this example, the Timer delay represents awaiting a response from a network call
+    Timer().schedule(3000){
+      contentHasLoaded = true
+    }
+  }
 
+  private fun setupSplashScreen(splashScreen: SplashScreen) {
+    val content: View = findViewById(android.R.id.content)
+    content.viewTreeObserver.addOnPreDrawListener(
+        object : ViewTreeObserver.OnPreDrawListener {
+          override fun onPreDraw(): Boolean {
+            return if (contentHasLoaded) {
+              content.viewTreeObserver.removeOnPreDrawListener(this)
+              true
+            } else false
+          }
+        }
+    )
+
+    splashScreen.setOnExitAnimationListener { splashScreenView ->
+      val slideBack = ObjectAnimator.ofFloat(
+          splashScreenView.view,
+          View.TRANSLATION_X,
+          0f,
+          -splashScreenView.view.width.toFloat()
+      ).apply {
+        interpolator = DecelerateInterpolator()
+        duration = 800L
+        doOnEnd { splashScreenView.remove() }
+      }
+
+      slideBack.start()
+    }
   }
 }

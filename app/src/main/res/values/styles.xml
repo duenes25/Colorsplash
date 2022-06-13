@@ -2,16 +2,23 @@
 
   <!-- Base application Theme -->
   <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
-    <!-- Customize your theme here. -->
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
   </style>
 
-  <!-- Splash Screen Theme-->
-  <style name="SplashTheme" parent="Theme.SplashScreen">
-    <item name="windowSplashScreenBackground">@color/colorOnPrimary</item>
-    <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
+  <!-- Legacy Splash Screen Theme -->
+  <style name="LegacySplashTheme" parent="Theme.AppCompat.NoActionBar">
+    <item name="android:windowBackground">@drawable/legacy_splash_background</item>
+    <item name="android:windowTranslucentStatus">true</item>
+    <item name="android:windowTranslucentNavigation">true</item>
+  </style>
+
+  <!-- Splash Screen Theme (pre Android 12) -->
+  <style name="Theme.App.Starting" parent="Theme.SplashScreen.IconBackground">
+    <item name="windowSplashScreenBackground">@color/ic_launcher_background</item>
+    <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+    <item name="windowSplashScreenIconBackgroundColor">@color/yellow6</item>
     <item name="postSplashScreenTheme">@style/AppTheme</item>
   </style>
 

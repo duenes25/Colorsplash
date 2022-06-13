@@ -1,3 +1,9 @@
 <resources>
   <string name="app_name">ColorSplash</string>
+
+  <string name="subtitle_pink">Pink</string>
+  <string name="subtitle_blue">Blue</string>
+  <string name="subtitle_green">Green</string>
+  <string name="subtitle_yellow">Yellow</string>
+  <string name="subtitle_purple">Purple</string>
 </resources>
